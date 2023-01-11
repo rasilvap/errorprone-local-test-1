@@ -5,11 +5,12 @@ import java.util.Arrays;
 import static java.util.Arrays.compare;
 
 public class ErrorProneTest {
-    static final long NANOS_PER_DAY = 24L  * 60 * 60 * 1000 * 1000 * 1000L;
+    static final long NANOS_PER_DAY = 24 * 60 * 60 * 1000 * 1000 * 1000;
     public static void main(String[] args) {
         var stringArray = triggerAvoidObjectArrays();
         triggerMathAbsoluteNegative();
-        compare(new String[]{"this"}, new String[]{"that"});
+        var thisArr = new String[]{"this"};
+        thisArr.equals(new String[]{"that"});
         System.out.println(Arrays.toString(stringArray));
     }
 
