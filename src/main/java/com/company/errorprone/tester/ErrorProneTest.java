@@ -1,6 +1,7 @@
 package com.company.errorprone.tester;
 
 import java.util.Arrays;
+import java.util.Random;
 
 import static java.util.Arrays.compare;
 
@@ -23,5 +24,7 @@ public class ErrorProneTest {
         long veryNegativeLong = Math.abs(Long.MIN_VALUE);
         System.out.println(veryNegative);
         System.out.println(veryNegativeLong);
+        Random random = new Random();
+        Math.abs(random.nextInt());
     }
 }
