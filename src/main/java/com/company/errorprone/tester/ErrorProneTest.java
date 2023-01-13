@@ -8,9 +8,9 @@ import static java.util.Arrays.compare;
 public class ErrorProneTest {
     static final long NANOS_PER_DAY = 24 * 60 * 60 * 1000 * 1000 * 1000;
     public static void main(String[] args) {
-        var stringArray = triggerAvoidObjectArrays();
+        String[] stringArray = triggerAvoidObjectArrays();
         triggerMathAbsoluteNegative();
-        var thisArr = new String[]{"this"};
+        String[] thisArr = new String[]{"this"};
         thisArr.equals(new String[]{"that"});
         System.out.println(Arrays.toString(stringArray));
     }
