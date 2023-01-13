@@ -1,6 +1,5 @@
 package com.company.errorprone.tester;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class ErrorProneTest {
