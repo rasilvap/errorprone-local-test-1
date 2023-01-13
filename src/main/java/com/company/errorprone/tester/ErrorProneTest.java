@@ -3,8 +3,6 @@ package com.company.errorprone.tester;
 import java.util.Arrays;
 import java.util.Random;
 
-import static java.util.Arrays.compare;
-
 public class ErrorProneTest {
     static final long NANOS_PER_DAY = 24 * 60 * 60 * 1000 * 1000 * 1000;
     public static void main(String[] args) {
