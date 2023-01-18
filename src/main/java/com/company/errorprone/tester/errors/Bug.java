@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Bug {
 
+    static final long NANOS_PER_DAY_ERRORS = 24 * 60 * 60 * 1000 * 1000 * 1000;
+
     public static boolean triggersArraysEquals() {
         String[] arr = {"error","prone", "2.18.0"};
         String[] arr2 = {"bug","patterns"};
