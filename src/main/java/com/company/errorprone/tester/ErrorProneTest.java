@@ -1,17 +1,18 @@
 package com.company.errorprone.tester;
 
+import static com.google.common.base.Verify.verify;
+import static java.util.Arrays.compare;
+
 import java.util.Arrays;
 import java.util.Random;
 
-import static java.util.Arrays.compare;
-
 public class ErrorProneTest {
-    static final long NANOS_PER_DAY = 24 * 60 * 60 * 1000 * 1000 * 1000;
+    static final long NANOS_PER_DAY = 24L * 60 * 60 * 1000 * 1000 * 1000L;
     public static void main(String[] args) {
         var stringArray = triggerAvoidObjectArrays();
         triggerMathAbsoluteNegative();
         var thisArr = new String[]{"this"};
-        thisArr.equals(new String[]{"that"});
+        verify(Arrays.equals(thisArr, new String[]{"that"}));
         System.out.println(Arrays.toString(stringArray));
     }
 
@@ -24,7 +25,7 @@ public class ErrorProneTest {
         long veryNegativeLong = Math.abs(Long.MIN_VALUE);
         System.out.println(veryNegative);
         System.out.println(veryNegativeLong);
-        Random random = new Random();
+        var random = new Random();
         Math.abs(random.nextInt());
     }
 }
